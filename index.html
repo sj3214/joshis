@@ -1,0 +1,77 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>
+            Homepage
+        </title>
+
+        <link rel="stylesheet" href="globalstylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Martel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+        <script src="js_file.js" type="text/javascript"></script>
+    </head>
+
+    <body style="background-color:white;">
+        
+        <div class="nav_bar" >         
+            <ul>
+                <li onmouseover="new_img('icon_lcl_apt','Images/lclapt_red_redfilled.svg')" onmouseout="old_img('icon_lcl_apt','Images/lclapt_red_whitefilled.svg')" href="index.html">
+                    <img onclick="go_to_link('index.html')" id="icon_lcl_apt" src="Images/lclapt_red_whitefilled.svg"></a>
+                </li>
+                <li><a href="curriculum_vitae.html">Curriculum Vitae</a></li>
+                <li><a href="protocols.html">Protocols</a></li>
+                <li><a href="scripts.html">Scripts and Github</a></li>
+            </ul>
+        </div>
+
+        <div class="main_content">
+            
+            <h1 class="main_head">
+                Shivang Joshi
+            </h1>
+        
+            <p class="text_body1">
+                Welcome to my personal webpage. I am Shivang, a research scientist and an avid problem solver in the field of Synthetic Biology,  
+                an emerging engineering discipline that aims to rationally design and create novel biotechnologies with robust and highly predictable 
+                behaviour. On my site you can find details of my 
+                <a href="curriculum_vitae.html">academic and research career</a>, 
+                as well as other useful information, such as various 
+                <a href="protocols.html">molecular biology protocols</a>, 
+                <a href="scripts.html">open source Python scripts</a> 
+                that I have developed for some simple data analysis, as well as 
+                <a href="#contact">links to contact me</a>. <br><br>
+                Currently, I am undertaking a research internship at the Okinawa Institute of Science and Technology in the <a href="https://groups.oist.jp/naceu" target="_blank">Yokobayashi NACE Unit</a> (Jan - July 2020),
+                and shortly after I will be taking on a research scientist position in the <a href="http://netb.io/" target="_blank">NetBio Unit</a> at New York University Abu Dhabi (Aug 2020 - Aug 2021).         
+            </p>
+
+            <div class="page_links_large">
+                <a onmouseover="new_img('icon_career_path','Images/career_path_icon_red.svg')" onmouseout="old_img('icon_career_path','Images/career_path_icon_green.svg')" href="curriculum_vitae.html">
+                    <p>Education and Career</p>
+                    <img id="icon_career_path" src="Images/career_path_icon_green.svg">
+                </a>
+                <a onmouseover="new_img('icon_protocols','Images/protocols_icon_red.svg')" onmouseout="old_img('icon_protocols','Images/protocols_icon_green.svg')" href="protocols.html">
+                    <p>Lab Protocols</p>
+                    <img id="icon_protocols" src="Images/protocols_icon_green.svg">
+                </a>
+                <a onmouseover="new_img('icon_scripts','Images/scripts_icon_red.svg')" onmouseout="old_img('icon_scripts','Images/scripts_icon_green.svg')" href="scripts.html">
+                    <p>Scripts and Github</p>
+                    <img id="icon_scripts" src="Images/scripts_icon_green.svg">
+                </a>
+            </div>
+
+        </div>
+
+        <div id="contact" class="contact_bar">
+            <p>
+                Please feel free to contact me by email at <br> 
+                <a>shivangjoshis4@gmail.com</a>
+            </p>
+        </div>
+
+
+    </body>
+
+</html>
