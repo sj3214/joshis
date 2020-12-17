@@ -3,7 +3,12 @@
     --blue_col:#3BCCFF;
     --green_col:#37BF88;
     --black_col:#000000;
+    --white_col:#FFFFFF;
     font-size:16px;
+}
+
+.body{
+    background-color:--white_col;
 }
 
 .menu_button{
