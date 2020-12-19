@@ -6,6 +6,7 @@
         </title>
 
         <link rel="stylesheet" href="globalstylesheet.css">
+        <link rel="stylesheet" href="interactivetabstylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Martel&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -14,16 +15,16 @@
 
     <body>
         
-            <div class="nav_bar" >         
-                    <ul>
-                        <li onmouseover="new_img('icon_lcl_apt','Images/lclapt_red_redfilled.svg')" onmouseout="old_img('icon_lcl_apt','Images/lclapt_red_whitefilled.svg')" href="index.html">
-                            <img onclick="go_to_link('index.html')" id="icon_lcl_apt" src="Images/lclapt_red_whitefilled.svg"></a>
-                        </li>
-                        <li><a href="scripts.html">Scripts and Github</a></li>
-                        <li><a href="protocols.html">Protocols</a></li>
-                        <li><a href="curriculum_vitae.html">Curriculum Vitae</a></li>
-                    </ul>
-                </div>
+        <div class="nav_bar" >         
+            <ul>
+                <li onmouseover="new_img('icon_lcl_apt','Images/lclapt_red_redfilled.svg')" onmouseout="old_img('icon_lcl_apt','Images/lclapt_red_whitefilled.svg')" href="index.html">
+                    <img onclick="go_to_link('index.html')" id="icon_lcl_apt" src="Images/lclapt_red_whitefilled.svg"></a>
+                </li>
+                <li><a href="scripts.html">Scripts and Github</a></li>
+                <li><a href="protocols.html">Protocols</a></li>
+                <li><a href="curriculum_vitae.html">Curriculum Vitae</a></li>
+            </ul>
+        </div>
 
         <div class="main_content">
             
@@ -32,12 +33,119 @@
             </h1>
 
             <p class="text_body1">
-                Welcome to the Protocols page, here you will find insructions for various standard molecualr biology 
-                methods, as well as protocols for experimentation with <i>Escherichia coli</i> in 
-                mirco-plate readers/flow cytometry, as well as tips and advice on troubleshooting common 
-                issues in the lab.   
+                Welcome to the protocols page! In my nearly 3 years of research in synthetic biology, I am quite confident that I have made most of the imaginable 
+                mistakes that can occur in the lab, ranging from problems in standard protocols for PCR reactions, DNA assemblies, minipreps, cloning and handling of 
+                <i>E. coli</i>, as well as dealing with errors that arise on the fly in the middle of (sometimes very important!) experiments.
+                <br><br>
+                However, <u>from every failed attempt I strive to do my best not to repeat the same mistake twice</u>. Overtime, I have made so many mistakes, and more importantly, 
+                learnt just as many new tricks to overcome them that its became too much to hold it all in my head, and so I needed to document the lessons of my experiences 
+                in a easy to access location, such as through my personal website.
+                <br><br>
+                Here, I have tried to accumulate “standard” protocols for various molecular biology techniques, as well as collect notes on how to troubleshoot some common 
+                errors that may arise in a microbial synthetic biology lab, or at least for errors that I can speak about from personal experience. 
+                <br><br>
             </p>
         
+            <button class="tablink" onclick="openTab('pcr_tab', this)">PCR & DNA Assembly</button>
+            <button class="tablink" onclick="openTab('clone_tab', this)">Cloning with <i>E. coli</i></button>
+            <button class="tablink" onclick="openTab('exp_tab', this)">Experimenting with <i>E. coli</i></button>
+            
+            <div id="pcr_tab" class="tabcontent">
+                <div class="subtab">
+                    
+                    <div class="toggle"  onclick="toggleSubTab('pcr_content', this)">PCR</div>
+                    
+                    <div class="subtab_content" id="pcr_content">instructions on PCR etc.</div>
+
+                </div>
+                <div class="subtab">
+                
+                    <div class="toggle" onclick="toggleSubTab('miniprep_content', this)">Minipreps</div>
+
+                    <div class="subtab_content" id="miniprep_content">instructions on Miniprep etc.</div>
+
+                </div>
+                <div class="subtab">
+                    
+                    <div class="toggle" onclick="toggleSubTab('kld_content', this)">Site specific DNA editng</div>
+
+                    <div class="subtab_content" id="kld_content">instructions on KLD, ATW PCR etc.</div>
+                    
+                </div>
+                <div class="subtab">
+                
+                    <div class="toggle" onclick="toggleSubTab('gibson_content', this)">Gibson assembly</div>
+
+                    <div class="subtab_content" id="gibson_content">instructions on Gibson etc.</div>
+                
+                </div>
+                <div class="subtab">
+                    
+                    <div class="toggle" onclick="toggleSubTab('typeiis_content', this)">Golden-Gate/TypeIIS assembly</div>
+
+                    <div class="subtab_content" id="typeiis_content">instructions on TypeIIS etc.</div>
+                
+                </div>
+            </div>
+
+            <div id="clone_tab" class="tabcontent">
+                <div class="subtab">
+                    
+                        <div class="toggle"  onclick="toggleSubTab('antbio_content', this)">Antibiotcs and inducers</div>
+                        
+                        <div class="subtab_content" id="antbio_content">instructions on Antibiotics etc.</div>
+    
+                    </div>
+                    <div class="subtab">
+                    
+                        <div class="toggle" onclick="toggleSubTab('media_content', this)">Media recipes</div>
+    
+                        <div class="subtab_content" id="media_content">instructions on Media etc.</div>
+    
+                    </div>
+                    <div class="subtab">
+                        
+                        <div class="toggle" onclick="toggleSubTab('chemcomp_content', this)">Chemical competent cell preparation and transformation</div>
+    
+                        <div class="subtab_content" id="chemcomp_content">instructions on chemical competent cell preparation and transformation etc.</div>
+                        
+                    </div>
+                    <div class="subtab">
+                    
+                        <div class="toggle" onclick="toggleSubTab('electrocomp_content', this)">Electrocopetent cells and electroporation</div>
+    
+                        <div class="subtab_content" id="electrocomp_content">instructions on Electrocopetent cells and electroporation etc.</div>
+                    
+                    </div>
+                    <div class="subtab">
+                        
+                        <div class="toggle" onclick="toggleSubTab('trblsht_content', this)">General notes on troubleshooting cloning</div>
+    
+                        <div class="subtab_content" id="trblsht_content">General notes on troubleshooting cloning</div>
+                    
+                    </div>
+            </div>
+
+            <div id="exp_tab" class="tabcontent">
+                <div class="subtab">
+                    
+                        <div class="toggle"  onclick="toggleSubTab('plateread_content', this)">Plate-Reader Experiments</div>
+                        
+                        <div class="subtab_content" id="plateread_content">instructions on Plate-Reader Experiments etc.</div>
+    
+                    </div>
+                    <div class="subtab">
+                    
+                        <div class="toggle" onclick="toggleSubTab('flow_content', this)">Flow Cytometry Experiments</div>
+    
+                        <div class="subtab_content" id="flow_content">instructions on Flow Cytometry Experiments etc.</div>
+    
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 
         <div id="contact" class="contacts_bar"></div>
