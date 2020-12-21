@@ -18,25 +18,32 @@ function go_to_link(url){
     window.location.href = url;
 }
 
-function openTab(tabName, elmnt){
-    var i, tabcontent, tablinks;
-    
+function openTab(tabName, elmnt, tabHead){
+    var i, tabcontent, tabHeads, protocol_icons;
+
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display="none";
     }
 
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.color=blue;
-        tablinks[i].style.fontWeight="normal";
-        tablinks[i].style.borderColor=white;
+    tabHeads = document.getElementsByClassName("tab_head");
+    for (i = 0; i < tabHeads.length; i++) {
+        tabHeads[i].style.color=blue;
+        tabHeads[i].style.fontWeight="normal";
+        tabHeads[i].style.borderColor=white;
     }
  
+    protocol_icons = document.getElementsByClassName("protocol_icon");
+    for (i = 0; i < protocol_icons.length; i++) {
+        protocol_icons[i].style.display="none";
+    }
+
     document.getElementById(tabName).style.display="block";
+    console.log(document.getElementById(tabHead))
+    document.getElementById(tabHead).style.color=red;
+    document.getElementById(tabHead).style.fontWeight="bold";
+    document.getElementById(tabHead).style.borderColor=red;
     elmnt.style.color = red;
-    elmnt.style.fontWeight = "bold";
-    elmnt.style.borderColor = red;
 }
 
 function toggleSubTab(subTab, elmnt){  
