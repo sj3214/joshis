@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="interactivetabstylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Martel&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="Images/favicon.ico" rel="icon" type="image/ico"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
         <script src="js_file.js"></script>
     </head>
@@ -46,9 +47,29 @@
                 <br><br>
             </p>
         
-            <button class="tablink" onclick="openTab('pcr_tab', this)">PCR & DNA Assembly</button>
-            <button class="tablink" onclick="openTab('clone_tab', this)">Cloning with <i>E. coli</i></button>
-            <button class="tablink" onclick="openTab('exp_tab', this)">Experimenting with <i>E. coli</i></button>
+            <div class="tablink" onclick="openTab('pcr_tab', this, 'head_assembly')" onmouseover="new_img('icon_assembly','Images/assembly_icon_2.svg')" onmouseout="old_img('icon_assembly','Images/assembly_icon_1.svg')">
+            
+                <p class="tab_head" id="head_assembly">PCR & DNA Assembly</p>
+
+                <img class="protocol_icon" id="icon_assembly" src="Images/assembly_icon_1.svg">
+            
+            </div>
+            
+            <div class="tablink" onclick="openTab('clone_tab', this, 'head_cloning')" onmouseover="new_img('icon_cloning','Images/cloning_icon_2.svg')" onmouseout="old_img('icon_cloning','Images/cloning_icon_1.svg')">
+            
+                <p class="tab_head" id="head_cloning">Cloning with <i>E. coli</i></p>
+
+                <img class="protocol_icon" id="icon_cloning" src="Images/cloning_icon_1.svg">
+            
+            </div>
+            
+            <div class="tablink" onclick="openTab('exp_tab', this, 'head_experiment')" onmouseover="new_img('icon_experiment','Images/experiment_icon_2.svg')" onmouseout="old_img('icon_experiment','Images/experiment_icon_1.svg')">
+            
+                <p class="tab_head" id="head_experiment">Experimenting with <i>E. coli</i></p>
+
+                <img class="protocol_icon" id="icon_experiment" src="Images/experiment_icon_1.svg">
+                
+            </div>
             
             <div id="pcr_tab" class="tabcontent">
                 <div class="subtab">
